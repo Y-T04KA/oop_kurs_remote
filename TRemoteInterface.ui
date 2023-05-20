@@ -134,8 +134,8 @@
      </rect>
     </property>
     <property name="text">
-     <string>Пошлите команду, чтобы 
- включить светофор</string>
+     <string>Светофор включится после 
+ отправки команды</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -288,6 +288,9 @@
      <property name="text">
       <string>Жёлтый</string>
      </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
     </widget>
     <widget class="QRadioButton" name="ul_green">
      <property name="geometry">
@@ -326,6 +329,9 @@
      </property>
      <property name="text">
       <string>Жёлтый</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
      </property>
     </widget>
     <widget class="QRadioButton" name="ur_green">
@@ -390,5 +396,76 @@
  <resources>
   <include location="remote_ui.qrc"/>
  </resources>
- <connections/>
+ <connections>
+  <connection>
+   <sender>manualButton</sender>
+   <signal>clicked()</signal>
+   <receiver>TRemoteInterface</receiver>
+   <slot>manualBt()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>225</x>
+     <y>423</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>291</x>
+     <y>426</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>yellowButton</sender>
+   <signal>clicked()</signal>
+   <receiver>TRemoteInterface</receiver>
+   <slot>yellowBt()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>505</x>
+     <y>65</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>525</x>
+     <y>36</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>autoButton</sender>
+   <signal>clicked()</signal>
+   <receiver>TRemoteInterface</receiver>
+   <slot>autoBt()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>534</x>
+     <y>104</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>588</x>
+     <y>102</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>offButton</sender>
+   <signal>clicked()</signal>
+   <receiver>TRemoteInterface</receiver>
+   <slot>offBt()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>434</x>
+     <y>430</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>469</x>
+     <y>448</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>manualBt()</slot>
+  <slot>yellowBt()</slot>
+  <slot>autoBt()</slot>
+  <slot>offBt()</slot>
+ </slots>
 </ui>
