@@ -26,19 +26,19 @@ void TRemoteInterface::answer(QString msg) {
 
 void TRemoteInterface::manualBt() {
     unsigned ur, br, bl, ul;
-    //red=0, yellow=1, green=2
-    if (ui->ur_red->isChecked()) ur = 0; else
-        if (ui->ur_yellow->isChecked()) ur = 1; else
-            ur = 2;
-    if (ui->br_red->isChecked()) br = 0; else
-        if (ui->br_yellow->isChecked()) br = 1; else
-         br = 2;
-    if (ui->bl_red->isChecked()) bl = 0; else
-        if (ui->bl_yellow->isChecked()) bl = 1; else
-            bl = 2;
-    if (ui->ul_red->isChecked()) ul = 0; else
-        if (ui->ul_yellow->isChecked()) ul = 1; else
-            ul = 2;
+    //red=1, yellow=2, green=3
+    if (ui->ur_red->isChecked()) ur = 1; else
+        if (ui->ur_yellow->isChecked()) ur = 2; else
+            ur = 3;
+    if (ui->br_red->isChecked()) br = 1; else
+        if (ui->br_yellow->isChecked()) br = 2; else
+         br = 3;
+    if (ui->bl_red->isChecked()) bl = 1; else
+        if (ui->bl_yellow->isChecked()) bl = 2; else
+            bl = 3;
+    if (ui->ul_red->isChecked()) ul = 1; else
+        if (ui->ul_yellow->isChecked()) ul = 2; else
+            ul = 3;
     messageBuild(ur,br,bl,ul);
     test.setText(QString().setNum(ur));
     test.show();
@@ -46,7 +46,7 @@ void TRemoteInterface::manualBt() {
 
 void TRemoteInterface::yellowBt() {
     //something-something
-    messageBuild(1,1,1,1);
+    messageBuild(2,2,2,2);
     test.setText("yellow");
     test.show();
 }
