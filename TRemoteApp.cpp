@@ -14,10 +14,10 @@ TRemoteApp::TRemoteApp(int argc, char* argv[]) : QApplication(argc, argv) {
     connect(interface, SIGNAL(request(QString)), this, SLOT(toComms(QString)));
 }
 
-void TRemoteApp::fromComms(QByteArray msg) {
+void TRemoteApp::fromComms(const QByteArray& msg) {
     //interface->answer(QString(msg));
 }
 
-void TRemoteApp::toComms(QString msg) {
+void TRemoteApp::toComms(const QString& msg) {
     comm->send(QByteArray().append(QByteArray().fromStdString(msg.toStdString())));
 }

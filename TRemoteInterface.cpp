@@ -19,10 +19,6 @@ TRemoteInterface::~TRemoteInterface() {
     delete ui;
 }
 
-void TRemoteInterface::answer(QString msg) {
-     ui->output->clear();
-     ui->output->setText(msg);
-}
 
 void TRemoteInterface::manualBt() {
     unsigned ur, br, bl, ul;

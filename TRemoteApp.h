@@ -16,8 +16,8 @@ class TRemoteApp : public QApplication {
 public:
     TRemoteApp(int, char**);
 public slots:
-    void fromComms(QByteArray);
-    void toComms(QString);
+    void fromComms(const QByteArray&);
+    void toComms(const QString&);
 };
 
 

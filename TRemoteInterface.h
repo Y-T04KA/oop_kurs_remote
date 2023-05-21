@@ -27,7 +27,7 @@ private:
     void messageBuildTime(unsigned);
     QMessageBox test;
 public slots:
-    void answer(QString);
+
 private slots:
     void manualBt();
     void yellowBt();

@@ -9,5 +9,6 @@ int main(int argc, char *argv[]) {
     return QApplication::exec();*/
 
     TRemoteApp a(argc,argv);
+    a.setStyle("fusion");
     return a.exec();
 }
