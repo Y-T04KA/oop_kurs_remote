@@ -25,7 +25,6 @@ private:
     Ui::TRemoteInterface *ui;
     void messageBuild(unsigned int, unsigned int, unsigned int, unsigned int);
     void messageBuildTime(unsigned);
-    QMessageBox test;
 public slots:
 
 private slots:

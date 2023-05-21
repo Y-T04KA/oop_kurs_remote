@@ -36,28 +36,22 @@ void TRemoteInterface::manualBt() {
         if (ui->ul_yellow->isChecked()) ul = 2; else
             ul = 3;
     messageBuild(ur,br,bl,ul);
-    test.setText(QString().setNum(ur));
-    test.show();
 }
 
 void TRemoteInterface::yellowBt() {
     //something-something
     messageBuild(2,2,2,2);
-    test.setText("yellow");
-    test.show();
+
 }
 
 void TRemoteInterface::autoBt() {
     unsigned time = ui->timeBox->value();
     messageBuildTime(time);
-    test.setText(QString().setNum(time));
-    test.show();
+
 }
 
 void TRemoteInterface::offBt() {
     messageBuildTime(0);
-    test.setText("off");
-    test.show();
 }
 
 void TRemoteInterface::messageBuild(unsigned int ur, unsigned int br, unsigned int bl, unsigned int ul) {
